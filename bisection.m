@@ -13,7 +13,7 @@ function [x0, n, er] = bisection(fx, a, b, e)
     while(abs(a-b) >= e)
         n = n + 1;
         c = (a+b)/2;
-        if fx(a)*fx(c) <= 0 
+        if fx(a) * fx(c) <= 0 
             b = c;
         else
             a = c;
