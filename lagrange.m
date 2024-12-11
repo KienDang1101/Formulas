@@ -6,7 +6,7 @@ function [P, result] = lagrange(xa, ya, x0)
         L = 1;
         for j = 1 : n
             if (i ~= j)
-                L = L*(x - xa(j)) / (xa(i) - xa(j));
+                L = L * (x - xa(j)) / (xa(i) - xa(j));
             end
         end
         P = P + ya(i)*L;
