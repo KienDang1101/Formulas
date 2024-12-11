@@ -23,7 +23,7 @@ function [x0, n, er] = newtonEquation(fx, a, b, e)
     while(1)
         n = n + 1;
         x1 = x0 - (fx(x0) / d1_fx(x0));
-        if abs(x1 - x0) <= e
+        if abs(x1 - x0) < e
             break;
         end
         x0 = x1;
