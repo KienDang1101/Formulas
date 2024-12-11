@@ -9,11 +9,11 @@ function [x0, n, er] = newtonEquation(fx, a, b, e)
     fx = matlabFunction(fx, 'vars', {'x'});
     d1_fx = matlabFunction(d1_fx, 'vars', {'x'}); 
     d2_fx = matlabFunction(d2_fx, 'vars', {'x'});
-    if (d1_fx(a)*d1_fx(b) <= 0) || (d2_fx(a)*d2_fx(b) <= 0)
+    if (d1_fx(a) * d1_fx(b) <= 0) || (d2_fx(a) * d2_fx(b) <= 0)
         er = 'Check your input! fx''(a) * fx''(b) and fx''''(a) * fx''''(b) must be > 0';
         return;
     end
-    
+
     %Newton method
     if fx(a) * d2_fx(a) > 0
         x0 = a;
