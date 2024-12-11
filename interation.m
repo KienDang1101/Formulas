@@ -25,19 +25,13 @@ function [x0, n, er] = interation(fx, a, b, e)
     %Interation method
     x0 = (a + b)/2;
     gx = matlabFunction(gx);
-    max_iter = 100;
-    while (1)
+    while(1)
         n = n + 1;
         x1 = gx(x0);
         if abs(x1 - x0) < e
-            x0 = x1;
-            er = 'No error';
-            return;
-        end
-        if n >= max_iter
-            er = 'Maximum iterations reached without convergence';
-            return;
+            break;
         end
         x0 = x1;
     end
+    er = 'No error';
 end
