@@ -2,6 +2,7 @@ function [x0, n, er] = newtonEquation(fx, a, b, e)
     n = 0;
     x0 = 0;
     fx = str2sym(fx);
+
     %Condition to use newton method
     d1_fx = diff(fx);
     d2_fx = diff(d1_fx);
@@ -12,6 +13,7 @@ function [x0, n, er] = newtonEquation(fx, a, b, e)
         er = 'Check your input! fx''(a) * fx''(b) and fx''''(a) * fx''''(b) must be > 0';
         return;
     end
+    
     %Newton method
     if fx(a) * d2_fx(a) > 0
         x0 = a;
