@@ -1,4 +1,4 @@
-function [a, b] = RegressLinear(x, y)
+function [a, b] = regressLinear(x, y)
     n = length(x);
     sumx = sum(x);
     sumy = sum(y);
