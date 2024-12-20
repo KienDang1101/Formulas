@@ -1,4 +1,4 @@
-function [a, b] = RegressEulerexp(x, y)
+function [a, b] = regressEulerexp(x, y)
 
     y = log(y);
     
