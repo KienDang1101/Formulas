@@ -1,4 +1,4 @@
-function [a,b] = RegressExponential(x, y)
+function [a,b] = regressExponential(x, y)
 
     x = log10(x);
     y = log10(y);
