@@ -9,7 +9,6 @@ function [P, result] = newtonInterpolation(xa, ya, x0)
     end
     %result
     syms X;
-    n = length(d);
     result = d(n);
     P = d(n);
     for i = (n - 1) : -1 : 1
