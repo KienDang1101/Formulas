@@ -1,15 +1,15 @@
-function y = simpson38(fx, a, b, N)
+function y = simpson38(fx, a, b, n)
     % tach thanh 2 phan:
     % chia het 2 => Simpson 1/3 (n)
     % chia het 3 => Simpson 3/8 (m)
     % it nhat 1 lan Simpson 3/8
-    h = (b - a)/N;
+    h = (b - a)/n;
     fx = matlabFunction(fx);
     m = 0;
     while 1 
-        N = N - 3;
+        n = n - 3;
         m = m + 3;
-        if mod(N, 2) == 0
+        if mod(n, 2) == 0
             break;
         end
     end
